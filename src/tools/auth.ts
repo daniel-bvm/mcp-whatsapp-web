@@ -115,8 +115,8 @@ async function checkAuthStatus(
         {
           type: 'text',
           text: isAuthenticated 
-            ? 'You are currently authenticated with WhatsApp and ready to use all features.' 
-            : 'You are not currently authenticated with WhatsApp. Please use the get_qr_code tool to authenticate.'
+            ? 'true' 
+            : 'false'
         }
       ],
       isError: false
@@ -127,7 +127,7 @@ async function checkAuthStatus(
       content: [
         {
           type: 'text',
-          text: `Error checking authentication status: ${error instanceof Error ? error.message : String(error)}`
+          text: `error`
         }
       ],
       isError: true

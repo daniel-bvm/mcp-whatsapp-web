@@ -47,15 +47,6 @@ export class WhatsAppMcpServer {
     registerMessageTools(this.server, this.whatsapp);
     registerMediaTools(this.server, this.whatsapp);
 
-    // Remove example dummy tool if no longer needed, or keep for testing
-    // this.server.tool('ping', async () => ({
-    //   content: [{ type: 'text', text: 'pong' }],
-    // }));
-    // Let's keep ping for now for basic testing
-    this.server.tool('ping', async () => ({
-      content: [{ type: 'text', text: 'pong' }],
-    }));
-
     log.info('MCP tools registered.');
   }
 
